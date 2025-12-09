@@ -1,3 +1,4 @@
+import Store from "./components/store";
 import storesData from "./data.json";
 
 export default function Home() {
@@ -6,17 +7,15 @@ export default function Home() {
   return (
     <div>
       {stores.map((store) => (
-        <div key={store.id} className="mt-5">
-          <h2>{store.name}</h2>
-          <p>{store.address}</p>
-          <p>{store.phoneNumber}</p>
-          <p>
-            <a href={store.website} target="_blank" rel="noopener noreferrer">
-              {store.website}
-            </a>
-          </p>
-          <p>Closing Date: {store.closingDate}</p>
-        </div>
+        <Store
+          key={store.id}
+          id={store.id}
+          name={store.name}
+          address={store.address}
+          phoneNumber={store.phoneNumber}
+          website={store.website}
+          closingDate={store.closingDate}
+        />
       ))}
     </div>
   );
