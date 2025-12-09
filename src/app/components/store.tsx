@@ -16,8 +16,8 @@ export default function Store({
   closingDate,
 }: Readonly<StoreProps>) {
   return (
-    <div key={id} className="mt-5">
-      <h2>{name}</h2>
+    <div key={id} className="mt-5 bg-blue-300 p-4 rounded-lg m-6 text-white">
+      <h2 className="text-lg">{name}</h2>
       <p>{address}</p>
       <p>{phoneNumber}</p>
       <p>
